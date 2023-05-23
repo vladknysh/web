@@ -34,7 +34,7 @@ class Items extends HTMLElement {
       // Loop through the items and generate HTML markup
       for (const itemId in items) {
         const item = items[itemId];
-        itemsHTML += `<div>
+        itemsHTML += `<div class="item-card">
           <h2>${item.name}</h2>
           <p>${item.description}</p>
           <img src="${item.imageUrl}" alt="${item.name}" />

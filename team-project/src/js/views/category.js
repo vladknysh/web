@@ -11,10 +11,10 @@ export default () => {
 
   return /*html*/ `
     <div class="content-container">
-      <div class="categories-wrapper">
+      <div class="page-block categories-wrapper">
         <categories-list></categories-list>
       </div>
-      <div class="main-content">
+      <div class="page-block main-content">
         <h1>${category}</h1>
         <items-list></items-list>
         <!-- Add the code to display the category content here -->
