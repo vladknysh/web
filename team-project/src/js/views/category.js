@@ -10,6 +10,7 @@ export default () => {
   const category = getCategoryFromPath();
 
   return /*html*/ `
+    <categories-list></categories-list>
     <h1>${category}</h1>
     <items-list></items-list>
     <!-- Add the code to display the category content here -->
