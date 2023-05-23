@@ -2,3 +2,9 @@
 @import 'navbar.css';
 @import 'footer.css';
 
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
