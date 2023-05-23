@@ -39,7 +39,7 @@ class Items extends HTMLElement {
         const item = items[itemId];
         // Add a link around each item
         itemsHTML += `<a href="/categories/${category}/items/${itemId}" class="item-link" data-link>
-          <div>
+          <div class="item-card">
             <h2>${item.name}</h2>
             <p>${item.description}</p>
             <img src="${item.imageUrl}" alt="${item.name}" />
