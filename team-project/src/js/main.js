@@ -1,11 +1,13 @@
 import home from "./views/home.js";
 import about from "./views/about.js";
 import category from "./views/category.js";
+import item from "./views/item.js";
 
 const routes = {
   "/": { title: "Home", render: home },
   "/about": { title: "About", render: about },
   "/categories/:category": { title: "Category", render: category },
+  "/categories/:category/items/:objectid": { title: "Item", render: item },
 };
 
 export function router() {
