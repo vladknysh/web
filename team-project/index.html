@@ -1,129 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Responsive Single Page </title>
-		<link rel="stylesheet" type="text/css" href="./src/css/style.css">
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	
-	<body>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-		<nav class="nav" id="navbar">
-			<a href="/" data-link>Home</a>
-			<a href="/about" data-link>About</a>
-			<a href="/contact" data-link>Contact</a>
-		</nav>
-		<div class="hero">
-			<h1>Tech online store</h1>
-		</div>
-		
-		<main id="app"></main>
 
-		<script type="module" src="./src/js/main.js"></script>
+<head>
+	<title>Responsive Single Page </title>
+	<link rel="stylesheet" type="text/css" href="./src/css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-		
-			<div><h1>Products</h1></div>
+<body>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	<nav class="nav" id="navbar">
+		<a href="/" data-link>Home</a>
+		<a href="/about" data-link>About</a>
+		<a href="/contact" data-link>Contact</a>
+	</nav>
+	<div class="hero">
+		<h1>Tech online store</h1>
+	</div>
 
-			<!-- FOUR COLUMN LAYOUT -->
-			<div class="row wrap">
-				<div class="col sp-4">
-					<img src="https://bit.ly/2GtdFda" alt="lake with Mountains in the background">
-					<h3>Column One</h3>
-					<p>
-						Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.
-					</p>
-				</div>
-				<div class="col sp-4">
-					<img src="https://bit.ly/2pSsMXg" alt="Mountains and forest">
-					<h3>Column Two</h3>
-					<p>
-						Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.
-					</p>
-					<button class="btn plain">Read It</button>
-				</div>
-				<div class="col sp-4">
-					<img src="https://bit.ly/2Gk8Lmu" alt="Sunset at the beach">
-					<h3>Column Three</h3>
-					<p>
-						Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis. Fusce posuere egestas enim eu viverra.
-					</p>
-				</div>
-				<div class="col sp-4">
-					<img src="https://bit.ly/2E7XiR6" alt="Autumn leaves on the ground">
-					<h3>Column Four</h3>
-					<p>
-						Ut ac odio scelerisque ante ornare commodo. Sed faucibus dui libero, in tincidunt purus pretium quis.
-					</p>
-					<button class="btn plain">Details</button>
-				</div>
-			</div>
+	<main id="app"></main>
 
-		<!-- BANNER SECTION -->
-    <div class="banner">
-      <h2 id="banner-title">Our Services</h2>
-      <p>Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. Etiam a mi quis arcu varius condimentum.
-      </p>
-    </div>
+	<script type="module" src="./src/js/main.js"></script>
+</body>
 
-		<div><h1>Made By</h1></div>
-
-		<!-- THREE COLUMN LAYOUT -->
-		<div class="wrapper">
-			<div class="row">
-				<div class="col sp-3" id="green">
-					<img src="https://bit.ly/2MOG1BJ" alt="Golden Gate Bridge">
-					<h3 class="green-clr">Bootsrap V3.3.6</h3>
-					<p>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</p>
-					<button class="btn" id="green-btn">Button Green</button>
-				</div>
-				<div class="col sp-3" id="blue">
-					<img src="https://bit.ly/2KUKq4m" alt="Plate of Sushi">
-					<h3 class="blue-clr">Responsive Design</h3>
-					<p>Conquer Template is provided by templatemo for free of charge. You can use this template for any kind of website. No credit link is required. All images by Unsplash. Thank you for visiting our website. Please come again!</p>
-					<button class="btn" id="blue-btn">See Details</button>
-				</div>
-				<div class="col sp-3" id="red">
-					<img src="https://bit.ly/2MizIu0" alt="Tree in sunshine">
-					<h3 class="red-clr">Parallax Layout</h3>
-					<p>Morbi sagittis justo a velit placerat ullamcorper quis quis velit. Sed convallis at risus ullamcorper auctor. Praesent quis velit neque. Quisque semper porta nisi vitae suscipit. Duis lectus magna, ornare ac scelerisque.</p>
-					<button class="btn" id="red-btn">Button Red</button>
-				</div>
-			</div>
-		</div>
-
-		<!-- CONTACT FORM -->
-    <div class="contact-form">
-      <h2 id="contact-title">Contact Form</h2>
-      <p class="darker">Nunc diam leo, fringilla vulputate elit lobortis, consectetur vestibulum quam. Sed id felis ligula. In euismod libero at magna dapibus, in rutrum velit lacinia. Etiam a mi quis arcu varius condimentum.</p>
-      <div class="row">
-        <div class="inputs">
-          <input type="text" name="name" placeholder="Name">
-          <input type="text" name="email" placeholder="Email">
-          <input type="text" name="subject" placeholder="Subject">
-        </div>
-        <div class="text">
-          <textarea>Your message here...</textarea>
-          <button class="send">Send</button>
-        </div>
-      </div>
-    </div>
-    <div class="contact-form-bg"></div>
-
-		<script>
-			function myFunction() {
-				var x = document.getElementById("navbar");
-				if (x.className === "nav") {
-					x.className += " responsive";
-				} else {
-					x.className = "nav";
-				}
-			}
-			// var para = document.getElementById("col-1-para").innerHTML;
-			// if (para.length > 300) {
-			// 	para = para.slice(0, 301) + "...";
-			// 	document.getElementById("col-1-para").innerHTML = para;
-			// }
-		</script>
-	</body>
 </html>
