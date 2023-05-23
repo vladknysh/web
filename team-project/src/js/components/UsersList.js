@@ -50,4 +50,4 @@ class Users extends HTMLElement {
   }
 }
 
-customElements.define("users-custom", Users);
+customElements.define("users-list", Users);

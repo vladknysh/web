@@ -1,30 +1,38 @@
 import home from "./views/home.js";
 import about from "./views/about.js";
+import category from "./views/category.js";
 
 const routes = {
-    "/": { title: "Home", render: home },
-    "/about": { title: "About", render: about },
+  "/": { title: "Home", render: home },
+  "/about": { title: "About", render: about },
+  "/categories/:category": { title: "Category", render: category },
 };
 
-function router() {
-    let view = routes[location.pathname];
+export function router() {
+  let view = routes[location.pathname];
 
-    if (view) {
-        document.title = view.title;
-        app.innerHTML = view.render();
-    } else {
-        history.replaceState("", "", "/");
-        router();
-    }
-};
+  if (!view && location.pathname.startsWith("/categories/")) {
+    const category = location.pathname.split("/")[2];
+    view = routes["/categories/:category"];
+    view.category = category;
+  }
+
+  if (view) {
+    document.title = view.title;
+    app.innerHTML = view.render();
+  } else {
+    history.replaceState("", "", "/");
+    router();
+  }
+}
 
 // Handle navigation
-window.addEventListener("click", e => {
-    if (e.target.matches("[data-link]")) {
-        e.preventDefault();
-        history.pushState("", "", e.target.href);
-        router();
-    }
+window.addEventListener("click", (e) => {
+  if (e.target.matches("[data-link]")) {
+    e.preventDefault();
+    history.pushState("", "", e.target.href);
+    router();
+  }
 });
 
 // Update router
