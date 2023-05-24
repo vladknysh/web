@@ -1,13 +1,8 @@
 import "../components/Item/ItemsList.js";
+import { extractCategoryFromPath } from "../helpers/PathHelpers.js";
 
 export default () => {
-  const getCategoryFromPath = () => {
-    const path = location.pathname;
-    const parts = path.split("/");
-    return parts[2]; // Get the category from the path segment
-  };
-
-  const category = getCategoryFromPath();
+  let categoryName = extractCategoryFromPath();
 
   return /*html*/ `
     <div class="content-container">
@@ -15,7 +10,7 @@ export default () => {
         <categories-list></categories-list>
       </div>
       <div class="page-block main-content">
-        <h1>${category}</h1>
+        <h1>${categoryName}</h1>
         <items-list></items-list>
         <!-- Add the code to display the category content here -->
       </div>

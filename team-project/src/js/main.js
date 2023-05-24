@@ -7,7 +7,7 @@ const routes = {
   "/": { title: "Home", render: home },
   "/about": { title: "About", render: about },
   "/categories/:category": { title: "Category", render: category },
-  "/categories/:category/items/:objectid": { title: "Item", render: item },
+  "/:category/items/:objectid": { title: "Item", render: item },
 };
 
 export function router() {
@@ -17,6 +17,14 @@ export function router() {
     const category = location.pathname.split("/")[2];
     view = routes["/categories/:category"];
     view.category = category;
+  }
+
+  if (!view && location.pathname.startsWith("/")) {
+    const category = location.pathname.split("/")[1];
+    const objectid = location.pathname.split("/")[3];
+    view = routes["/:category/items/:objectid"];
+    view.category = category;
+    view.objectid = objectid;
   }
 
   if (view) {
