@@ -1,6 +1,6 @@
 import '../components/UsersList.js';
 
 export default () => /*html*/`
-    <h1>About</h1>
-    <users-list></users-list>
+    <h1 class="our-team">Our team:</h1>
+    <users-list class="users-wrapper"></users-list>
 `;

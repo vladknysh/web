@@ -3,6 +3,8 @@
 @import 'footer.css';
 @import 'form.css';
 @import 'item.css';
+@import 'style.css';
+@import 'about.css';
 
 .content-container {
   display: flex;
