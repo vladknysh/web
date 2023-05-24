@@ -1,5 +1,5 @@
 import { extractCategoryFromPath } from "../../helpers/PathHelpers.js";
-import { handleAddItem } from "./ItemForm.js";
+import { handleAddItem } from "../../helpers/FormHelper.js";
 
 class Items extends HTMLElement {
   constructor() {
@@ -38,13 +38,13 @@ class Items extends HTMLElement {
       for (const itemId in items) {
         const item = items[itemId];
         // Add a link around each item
-        itemsHTML += `<a href="/categories/${category}/items/${itemId}" class="item-link" data-link>
-          <div class="item-card">
+        itemsHTML += `
+          <div class="item-card div-link">
             <h2>${item.name}</h2>
             <p>${item.description}</p>
+            <a href="/categories/${category}/items/${itemId}" class="item-link" data-link>Go To...</a>
             <img src="${item.imageUrl}" alt="${item.name}" />
-          </div>
-        </a>`;
+          </div>`;
       }
 
       this.innerHTML = /*html*/ `
