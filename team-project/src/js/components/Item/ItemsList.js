@@ -43,7 +43,7 @@ class Items extends HTMLElement {
           <div class="item-card div-link">
             <h2>${item.name}</h2>
             <p>${item.description}</p>
-            <a href="/categories/${category}/items/${itemId}" class="item-link" data-link>Go To...</a>
+            <a href="/${category}/items/${itemId}" class="item-link" data-link>Go To...</a>
             <img src="${item.imageUrl}" alt="${item.name}" />
           </div>`;
       }
