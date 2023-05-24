@@ -40,7 +40,7 @@ class Items extends HTMLElement {
         const item = items[itemId];
         // Add a link around each item
         itemsHTML += `
-          <div class="item-card div-link">
+          <div class="col-12 item-card div-link">
             <h2>${item.name}</h2>
             <p>${item.description}</p>
             <a href="/${category}/items/${itemId}" class="item-link" data-link>Go To...</a>
@@ -49,10 +49,9 @@ class Items extends HTMLElement {
       }
 
       this.innerHTML = /*html*/ `
-        <h1>Items</h1>
-
         <item-form></item-form>
-        ${itemsHTML}`;
+        ${itemsHTML}
+      `;
 
       const addItemForm = this.querySelector("#addItemForm");
       addItemForm.addEventListener("submit", handleAddItem);
