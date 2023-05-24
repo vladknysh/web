@@ -1,6 +1,7 @@
 @import 'shared.css';
 @import 'navbar.css';
 @import 'footer.css';
+@import 'form.css';
 
 .content-container {
   display: flex;

@@ -1,5 +1,6 @@
 import { extractCategoryFromPath } from "../../helpers/PathHelpers.js";
 import { handleAddItem } from "../../helpers/FormHelper.js";
+import '../Item/AddItemForm.js';
 
 class Items extends HTMLElement {
   constructor() {
@@ -50,19 +51,7 @@ class Items extends HTMLElement {
       this.innerHTML = /*html*/ `
         <h1>Items</h1>
 
-        <h2>Add Item</h2>
-        <form id="addItemForm">
-          <label for="name">Name</label>
-          <input type="text" id="name" required>
-
-          <label for="description">Description</label>
-          <textarea id="description" required></textarea>
-
-          <label for="imageUrl">Image URL</label>
-          <input type="url" id="imageUrl" required>
-
-          <button type="submit">Add</button>
-        </form>
+        <item-form></item-form>
         ${itemsHTML}`;
 
       const addItemForm = this.querySelector("#addItemForm");
