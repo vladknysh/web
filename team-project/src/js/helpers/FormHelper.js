@@ -1,4 +1,4 @@
-import { extractCategoryFromPath } from "../../helpers/PathHelpers.js";
+import { extractCategoryFromPath } from "./PathHelpers.js";
 
 export const handleAddItem = async (event) => {
   event.preventDefault();
