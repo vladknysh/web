@@ -36,12 +36,12 @@ class Users extends HTMLElement {
         usersHTML += `<div>
           <h2>${user.name}</h2>
           <p>${user.description}</p>
+          <a href="${user.github}">View github profile</a>
           <img src="${user.image}" alt="${user.name}" />
         </div>`;
       }
 
       this.innerHTML = /*html*/ `
-        <h1>------------------Users</h1>
         ${usersHTML}
       `;
     }
