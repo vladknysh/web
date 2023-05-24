@@ -22,18 +22,20 @@
 #addItemForm input {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
     border-radius: 3px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    background-color : rgb(90, 89, 89);
+    color: white;    
 }
 
 #addItemForm textarea {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
     border-radius: 3px;
     margin-bottom: 10px;
     resize: none;
+    background-color : rgb(90, 89, 89);
+    color: white;   
 }
 
 #addItemForm button {
