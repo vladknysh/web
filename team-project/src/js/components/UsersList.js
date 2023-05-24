@@ -33,11 +33,15 @@ class Users extends HTMLElement {
       // Loop through the users and generate HTML markup
       for (const userId in users) {
         const user = users[userId];
-        usersHTML += `<div>
+        usersHTML += `<div class="col-3 col-m-4 col-s-12 user-wrapper">
           <h2>${user.name}</h2>
           <p>${user.description}</p>
-          <a href="${user.github}">View github profile</a>
           <img src="${user.image}" alt="${user.name}" />
+          <div class="div-link user-links">
+            <span>View github profile</span>
+            <span class="material-icons">terminal</span>
+            <a href="${user.github}">View github profile</a>
+          </div>
         </div>`;
       }
 
