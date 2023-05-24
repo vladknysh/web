@@ -84,3 +84,15 @@ div.div-link a {
   opacity: 0; /* Fix to make div clickable in IE */
   filter: alpha(opacity=1); /* Fix to make div clickable in IE */
 }
+
+.category-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.category-icon {
+  width: 10px;
+  height: 10px;
+  margin: 0 20px 15px 0;
+}

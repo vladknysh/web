@@ -32,10 +32,11 @@ class Categories extends HTMLElement {
 
       // Loop through the categories and generate HTML markup
       for (const categoryName in categories) {
-        categoriesHTML += `<div>
-          <a href="/categories/${categoryName}" class="category-link" data-category="${categoryName}" data-link>
-            <span class="material-icons">face</span>${categoryName}
-          </a>
+        console.log(categoryName);
+        categoriesHTML += `<div class="category-item div-link">
+          <span class="material-icons category-icon">${categories[categoryName].icon}</span>
+          <p class="category-name">${categoryName}</p>
+          <a href="/categories/${categoryName}" class="category-link category-item" data-category="${categoryName}" data-link></a>
         </div>`;
       }
 
