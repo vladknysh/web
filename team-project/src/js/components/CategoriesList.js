@@ -52,6 +52,8 @@ class Categories extends HTMLElement {
     const handleCategoryClick = (event) => {
       event.preventDefault();
       history.pushState("", "", event.target.href);
+      console.log("handleCategoryClick");
+      console.log(event.target.href)
     };
 
     getCategories();

@@ -1,4 +1,4 @@
-import "../components/ItemsList.js";
+import "../components/Item/ItemsList.js";
 
 export default () => {
   const getCategoryFromPath = () => {
