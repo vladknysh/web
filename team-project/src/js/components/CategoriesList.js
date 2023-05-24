@@ -11,8 +11,6 @@ let getCategoriesData = async () => {
       options
     );
     const json = await response.json();
-    console.log("getCategoriesData");
-    console.log(json);
     return json;
   } catch (err) {
     console.log("Error getting documents", err);
@@ -25,14 +23,10 @@ class Categories extends HTMLElement {
 
     const getCategories = async () => {
       const categories = await getCategoriesData();
-      console.log("class Categories");
-      console.log(categories);
 
       let categoriesHTML = "";
 
-      // Loop through the categories and generate HTML markup
       for (const categoryName in categories) {
-        console.log(categoryName);
         categoriesHTML += `<div class="category-item div-link">
           <span class="material-icons category-icon">${categories[categoryName].icon}</span>
           <p class="category-name">${categoryName}</p>
@@ -55,8 +49,6 @@ class Categories extends HTMLElement {
     const handleCategoryClick = (event) => {
       event.preventDefault();
       history.pushState("", "", event.target.href);
-      console.log("handleCategoryClick");
-      console.log(event.target.href)
     };
 
     getCategories();

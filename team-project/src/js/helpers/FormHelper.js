@@ -46,8 +46,6 @@ const addItemToFirebase = async (item, category) => {
       options
     );
     const json = await response.json();
-    console.log("addItemToFirebase");
-    console.log(json);
   } catch (err) {
     console.log("Error adding item", err);
   }

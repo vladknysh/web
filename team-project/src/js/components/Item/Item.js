@@ -23,8 +23,7 @@ class Item extends HTMLElement {
           options
         );
         const item = await response.json();
-        console.log("getItemData");
-        console.log(item);
+        
         return item;
       } catch (err) {
         console.log("Error getting item", err);

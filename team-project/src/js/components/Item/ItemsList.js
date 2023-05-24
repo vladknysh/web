@@ -19,8 +19,6 @@ class Items extends HTMLElement {
           options
         );
         const json = await response.json();
-        console.log("getItemsData");
-        console.log(json);
         return json;
       } catch (err) {
         console.log("Error getting documents", err);
@@ -30,8 +28,6 @@ class Items extends HTMLElement {
     const getItems = async () => {
       const category = extractCategoryFromPath();
       const items = await getItemsData(category);
-      console.log("class Items");
-      console.log(items);
 
       let itemsHTML = "";
 
@@ -67,9 +63,6 @@ class Items extends HTMLElement {
       event.preventDefault();
       const itemId = event.currentTarget.getAttribute("href").split("/")[2];
       history.pushState("", "", event.target.href);
-      console.log("handleItemClick");
-      console.log(event.target.href)
-      console.log(event.target)
     };
 
     this.getItems = getItems;

@@ -11,8 +11,6 @@ let getUsers = async () => {
       options
     );
     const json = await response.json();
-    console.log("getUsers");
-    console.log(json);
     return json;
   } catch (err) {
     console.log("Error getting documents", err);
@@ -25,8 +23,6 @@ class Users extends HTMLElement {
 
     const getUsersData = async () => {
       const users = await getUsers();
-      console.log("class Users");
-      console.log(users);
 
       let usersHTML = "";
 
