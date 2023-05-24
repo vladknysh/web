@@ -35,7 +35,7 @@ class Item extends HTMLElement {
       const item = await getItemData();
 
       this.innerHTML = /*html*/ `
-        <div>
+        <div class="item-wrapper">
           <h2>${item.name}</h2>
           <p>${item.description}</p>
           <img src="${item.imageUrl}" alt="${item.name}" />
